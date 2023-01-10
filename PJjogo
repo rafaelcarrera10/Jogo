@@ -1,0 +1,33 @@
+package jogo;
+import java.util.Scanner;
+public class testjogo {
+	public static void main(String[] args) {
+	Scanner tc=new Scanner(System.in);
+	System.out.println("Nome Do jogado:");
+		String nome = tc.nextLine();
+		int cont=1;
+		for (int Fim=2;Fim>1;) {
+		for (; ;cont++ ) {
+		System.out.println("Escolha uma categoria:\n" + "Categoria1 \n" + "Categoria2\n" + "Categoria3"); 
+		int categ = tc.nextInt();
+		switch(categ) {
+		case 1:System.out.println("primeira pergunta desta categ1\n"); break;
+			
+		case 2:System.out.println("primeira pergunta desta categ2\n");break;
+			
+		case 3:System.out.println("primeira pergunta desta categ3\n");break;
+		
+		default: Fim = (Fim-1); break;
+		}	
+		System.out.println("Deseja continuar jogando?" + "\n" + "1 = Sim" + "\n" + "2 = Não"); 
+		int jnovo=tc.nextInt();
+		switch (jnovo) {
+		case 1: break;
+		case 2: Fim = (Fim-1); break;
+		default: Fim = (Fim-1); break;
+		}System.out.println(cont+ "\n");
+		}
+		}	
+	}
+
+}
